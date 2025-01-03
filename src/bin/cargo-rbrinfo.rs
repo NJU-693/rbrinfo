@@ -147,7 +147,7 @@ fn main() {
         // and dispatch the invocations to `rustc` and `mir-checker`, respectively.
         in_cargo_mir_checker();
     } else if let Some(
-        "/home/chubei/.rustup/toolchains/nightly-2024-07-21-x86_64-unknown-linux-gnu/bin/rustc",
+        "/home/bianhe/.rustup/toolchains/nightly-2024-07-21-x86_64-unknown-linux-gnu/bin/rustc",
     ) = std::env::args().nth(1).as_ref().map(AsRef::as_ref)
     {
         // This arm is executed when `cargo-mir-checker` runs `cargo rustc` with the `RUSTC_WRAPPER` env var set to itself:
@@ -160,7 +160,7 @@ fn main() {
         inside_cargo_rustc();
     } else {
         show_error(
-            "`cargo-rbrinfo` must be called with either `cargo-rbrinfo` or `/home/chubei/.rustup/toolchains/nightly-2024-07-21-x86_64-unknown-linux-gnu/bin/rustc` as first argument.".to_string(),
+            "`cargo-rbrinfo` must be called with either `cargo-rbrinfo` or `/home/bianhe/.rustup/toolchains/nightly-2024-07-21-x86_64-unknown-linux-gnu/bin/rustc` as first argument.".to_string(),
         )
     }
 }
